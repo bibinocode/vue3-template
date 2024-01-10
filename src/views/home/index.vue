@@ -1,5 +1,3 @@
 <template>
-  <div>
-    你好啊
-  </div>
+	<div>你好啊</div>
 </template>

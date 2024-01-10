@@ -1,56 +1,42 @@
 {
-  "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "allowJs": false,
-    "moduleResolution": "node",
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "noImplicitAny": false,
-    "skipLibCheck": true,
-    "types": [
-      "vite/client",
-      "element-plus/global"
-    ],
-    "removeComments": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "#/*": [
-        "types/*"
-      ]
-    },
-    "rootDirs": []
-  },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "types/**/*.d.ts",
-    "types/**/*.ts",
-    "build/**/*.ts",
-    "build/**/*.d.ts",
-    "mock/**/*.ts",
-    "vite.config.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.js"
-  ]
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "esnext",
+		"allowJs": false,
+		"moduleResolution": "node",
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"allowSyntheticDefaultImports": true,
+		"jsx": "preserve",
+		"sourceMap": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"experimentalDecorators": true,
+		"lib": ["dom", "esnext"],
+		"noImplicitAny": false,
+		"skipLibCheck": true,
+		"types": ["vite/client", "element-plus/global"],
+		"removeComments": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"#/*": ["types/*"]
+		},
+		"rootDirs": []
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"types/**/*.d.ts",
+		"types/**/*.ts",
+		"build/**/*.ts",
+		"build/**/*.d.ts",
+		"mock/**/*.ts",
+		"vite.config.ts"
+	],
+	"exclude": ["node_modules", "dist", "**/*.js"]
 }
