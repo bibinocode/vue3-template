@@ -12,6 +12,14 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 
+/** 模块导入 默认为懒加载模式 加入配置项 eager 取消懒加载 */
+
+const modules: Record<string, any> = import.meta.glob(['./modules/*.ts'], { eager: true })
+Object.keys(modules).forEach(key => {
+  router.push(modules[key].default)
+})
+
+
 
 const router = createRouter({
   routes,
