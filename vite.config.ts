@@ -11,6 +11,7 @@ import IconsResolvers from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import ElemtntPlus from "unplugin-element-plus/vite";
+import { viteMockServe } from "vite-plugin-mock";
 
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 	/** 获取当前工作目录 */
@@ -52,6 +53,13 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 			// 自动安装图标
 			Icons({
 				autoInstall: true,
+			}),
+			// mock启用
+			viteMockServe({
+				// 如果接口为/mock/xxx 以mock开头 就会拦截响应配置的内容
+				mockPath: "mock",
+				enable: process.env.NODE_ENV === "development" ? true : false,
+				logger: true,
 			}),
 		],
 		/** 服务配置 */
