@@ -6,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
 	{
 		path: "/",
 		name: "Home",
-		component: () => import("../views/home/index.vue"),
+		component: () => import("@/views/home/index.vue"),
 		meta: {},
 		children: [],
 	},
@@ -18,7 +18,7 @@ const modules: Record<string, any> = import.meta.glob(["./modules/*.ts"], {
 	eager: true,
 });
 Object.keys(modules).forEach((key) => {
-	router.push(modules[key].default);
+	routes.push(modules[key].default);
 });
 
 const router = createRouter({
